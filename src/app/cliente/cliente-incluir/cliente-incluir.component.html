@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="h3 mt-3 title-blue">{{cliente.id ? 'Alteração' : 'Cadastro'}} de Clientes</h1>
+    </div>
+  </div>
+  <div class="row mt-3 text-blue fw-bold">
+    <div class="col-6">
+      <label class="form-label">Nome*:</label>
+      <input type="text" placeholder="Informe o nome" class="form-control form-control-lg"
+             required [(ngModel)]="cliente.nomeCompleto" />
+    </div>
+    <div class="col-3">
+      <label class="form-label">CPF*:</label>
+      <input type="text" placeholder="Insira o CPF" mask="000.000.000-00" [disabled]="cliente.id !== ''" class="form-control form-control-lg" [(ngModel)]="cliente.cpf" />
+    </div>
+    <div class="col-3">
+      <label for="nascimento" class="form-label">Data de Nascimento*:</label>
+      <input type="date" class="form-control form-control-lg" [(ngModel)]="cliente.dataNascimento" />
+    </div>
+  </div>
+  <div class="row mt-3 text-blue fw-bold">
+    <div class="col-3">
+      <label for="rendaMensal" class="form-label">Renda Mensal*:</label>
+      <input type="text" prefix="R$ " class="form-control form-control-lg" [(ngModel)]="cliente.rendaMensal" mask="separator.2" [thousandSeparator]="'.'" [decimalMarker]="','" />
+    </div>
+    <div class="col-9">
+      <label for="email" class="form-label">Email*:</label>
+      <input type="email" placeholder="Informe o seu e-mail" class="form-control form-control-lg" [(ngModel)]="cliente.email" />
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <div class="form-text">*Campos de preenchimento obrigatório</div>
+    </div>
+  </div>
+  <div class="row mt-5 justify-content-center">
+    <div class="col-2">
+      <button type="button" class="btn btn-salvar text-uppercase w-100 fw-bold" (click)="aoSalvar()">
+        Salvar
+      </button>
+    </div>
+  </div>
+</div>

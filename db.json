@@ -1,0 +1,67 @@
+{
+  "clientes": [
+    {
+      "id": "9601cf3a-409a-4a60-bd4d-3e3666231676",
+      "nomeCompleto": "rafael albuquerque",
+      "cpf": "66373634566",
+      "email": "a@a.com",
+      "dataNascimento": "2002-05-02",
+      "rendaMensal": 123,
+      "dataCadastro": "2022-05-09T18:25:05.585Z"
+    },
+    {
+      "id": "63a414a7-f6d2-4800-a97c-714eae778df5",
+      "nomeCompleto": "jose da silva",
+      "cpf": "91243951028",
+      "email": "b@b.com112",
+      "dataNascimento": "2000-12-11",
+      "rendaMensal": 554,
+      "dataCadastro": "2022-05-09T18:35:34.636Z"
+    },
+    {
+      "id": "bbcbf538-e577-4063-8410-07f0b56c37c8",
+      "nomeCompleto": "joão da silva",
+      "cpf": "81676041524",
+      "email": "c@c.com",
+      "dataNascimento": "1970-07-01",
+      "rendaMensal": 1312,
+      "dataCadastro": "2022-05-09T18:37:08.506Z"
+    },
+    {
+      "id": "fc3f5dd9-b1d4-47fc-98e9-05766723756a",
+      "nomeCompleto": "maria da silva",
+      "cpf": "08142012707",
+      "email": "m@a.com",
+      "dataNascimento": "1990-03-12",
+      "rendaMensal": 764,
+      "dataCadastro": "2022-05-09T18:40:29.608Z"
+    },
+    {
+      "id": "0e946136-d1c3-430a-b349-4a1847faa15d",
+      "nomeCompleto": "antonio da silva",
+      "cpf": "61707452660",
+      "email": "g@c.com",
+      "dataNascimento": "1993-06-25",
+      "rendaMensal": 650,
+      "dataCadastro": "2022-05-09T18:41:15.671Z"
+    },
+    {
+      "id": "9005756a-3b74-4e04-864f-bacb72a0e895",
+      "nomeCompleto": "karina da silva",
+      "cpf": "87588342145",
+      "email": "a@aaa.com",
+      "dataNascimento": "2000-04-01",
+      "rendaMensal": 13123,
+      "dataCadastro": "2022-05-09T18:53:24.011Z"
+    },
+    {
+      "id": "59712e9f-c64e-49ab-891c-c48c74d742b3",
+      "nomeCompleto": "julio da silva",
+      "cpf": "81166369528",
+      "email": "a@a.com",
+      "dataNascimento": "2000-02-01",
+      "rendaMensal": 666,
+      "dataCadastro": "2022-05-09T19:36:35.327Z"
+    }
+  ]
+}

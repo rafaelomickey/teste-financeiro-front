@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="h3 mt-3 title-blue">Clientes</h1>
+    </div>
+  </div>
+  <div class="row mt-3 text-blue fw-bold">
+    <div class="col-6">
+      <label class="form-label">Nome</label>
+      <input type="text" placeholder="Informe o nome" class="form-control form-control-lg" [(ngModel)]="filtro.nomeCompleto">
+    </div>
+    <div class="col-3">
+      <label class="form-label">CPF</label>
+      <input type="text" placeholder="Insira o CPF" mask="000.000.000-00" class="form-control form-control-lg" [(ngModel)]="filtro.cpf">
+    </div>
+    <div class="col-1">
+      <label class="form-label">&nbsp;</label>
+      <button type="button" (click)="aoPesquisar()" class="btn btn-salvar w-100 fw-bold"><i class="me-1" data-feather="search"></i></button>
+    </div>
+  </div>
+  <div *ngIf="clientes.length" class="row mt-5">
+    <table>
+      <thead class="text-light-blue fw-bold">
+        <tr>
+          <th></th>
+          <th [appSort]="clientes" data-order="desc" data-name="nomeCompleto" scope="col" class="cursor-pointer">Nome</th>
+          <th [appSort]="clientes" data-order="desc" data-name="cpf" scope="col" class="cursor-pointer">CPF</th>
+          <th [appSort]="clientes" data-order="desc" data-name="dataNascimento" scope="col" class="cursor-pointer">Data de Nascimento</th>
+          <th [appSort]="clientes" data-order="desc" data-name="cadastro" scope="col" class="cursor-pointer">Data de Cadastro</th>
+          <th [appSort]="clientes" data-order="desc" data-name="rendaMensal" scope="col" class="cursor-pointer">Renda Mensal</th>
+          <th>Ações</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-blue fw-bold border-row" *ngFor="let cliente of clientes | paginate: { id: 'server', itemsPerPage: 4, currentPage: page, totalItems: total }">
+          <td class="arredondar-coluna-esquerda"></td>
+          <td>{{cliente.nomeCompleto}}</td>
+          <td>{{cliente.cpf | mask: '000.000.000-00'}}</td>
+          <td>{{cliente.dataNascimento | date: 'dd/MM/yyyy' }}</td>
+          <td>{{cliente.dataCadastro | date: 'dd/MM/yyyy HH:mm' }}</td>
+          <td>{{cliente.rendaMensal | currency:'BRL' }}</td>
+          <td><span (click)="aoEditar(cliente.id)"><i data-feather="edit"></i></span><span (click)="aoExcluir(cliente)"><i class="me-1" data-feather="trash-2"></i></span></td>
+          <td class="arredondar-coluna-direita"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="clientes.length" class="row justify-content-center">
+    <div class="col-6">
+      <pagination-controls (pageChange)="aoTrocarPagina($event)" id="server"></pagination-controls>
+    </div>
+  </div>
+</div>
